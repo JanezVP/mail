@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block vsebina_strani %}
+
+    <h1>Pozdravljeni</h1>
+    <p>V mestu {{ vreme.name }} je {{ vreme.main.temp }} stopinj.</p>
+
+    <h2>Vreme opisno</h2>
+    <ul>
+    {% for posamezno in vreme.weather %}
+        <li>{{posamezno.description}}</li>
+    {% endfor %}
+    </ul>
+{% endblock vsebina_strani %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block vsebina_strani %}
+    <h1>Prejeta sporočila</h1>
+
+    <ul>
+
+    {% for sporocilo in sporocila %}
+        <li><a href="/sporocila/{{sporocilo.key.id()}}">
+            {{ sporocilo.besedilo_sporocila }};
+            {{sporocilo.prejeto}}</a></li>
+    {% endfor %}
+
+    </ul>
+
+{% endblock vsebina_strani %}

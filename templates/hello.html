@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block vsebina_strani %}
+
+    <h1>Vaša e-pošta!</h1>
+    <form method="POST" action="/rezultat">
+        <label for="vpis-sporocila">Vpišite Vaše sporočilo</label>
+        <input name="sporocilo" id="vpis-sporocila">
+
+        <label for="email">Vnesite naslovnikov email</label>
+        <input name="email" id="email">
+
+        <button type="submit">Oddaj sporocilo</button>
+    </form>
+{% endblock vsebina_strani %}
